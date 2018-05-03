@@ -1,0 +1,70 @@
+\hypertarget{_actions_8h}{}\section{Source/\+Actions.h File Reference}
+\label{_actions_8h}\index{Source/\+Actions.\+h@{Source/\+Actions.\+h}}
+
+
+The Actions file define a thread safe game action.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_actions_8h_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action} \{ \newline
+\hyperlink{_actions_8h_a5827805c542ab9cccf700dc3697cbafcaccc0377a8afbf50e7094f5c23a8af223}{Game\+Action\+::\+I\+N\+V\+A\+L\+ID} = -\/1, 
+\hyperlink{_actions_8h_a5827805c542ab9cccf700dc3697cbafcab50339a10e1de285ac99d4c3990b8693}{Game\+Action\+::\+N\+O\+NE} = 0, 
+{\bfseries E\+X\+IT}, 
+\hyperlink{_actions_8h_a5827805c542ab9cccf700dc3697cbafca291554596c183e837f0a6bec3767c891}{Game\+Action\+::\+P\+A\+U\+SE}, 
+\newline
+{\bfseries S\+T\+A\+RT}, 
+{\bfseries G\+A\+M\+E\+O\+V\+ER}, 
+{\bfseries H\+O\+LE}
+ \}\begin{DoxyCompactList}\small\item\em is a strongly typed enum class representing the next game action \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ \hyperlink{_actions_8h_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action} $>$ \hyperlink{_actions_8h_a14bdb6dea6cabd733ce612258f33a4b8}{game\+\_\+action}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Actions file define a thread safe game action. 
+
+Game\+Actions are stored here as well as a thread safe Game\+Action variable, which has external linkage. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_actions_8h_a5827805c542ab9cccf700dc3697cbafc}\label{_actions_8h_a5827805c542ab9cccf700dc3697cbafc}} 
+\index{Actions.\+h@{Actions.\+h}!Game\+Action@{Game\+Action}}
+\index{Game\+Action@{Game\+Action}!Actions.\+h@{Actions.\+h}}
+\subsubsection{\texorpdfstring{Game\+Action}{GameAction}}
+{\footnotesize\ttfamily enum \hyperlink{_actions_8h_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+is a strongly typed enum class representing the next game action 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+N\+V\+A\+L\+ID@{I\+N\+V\+A\+L\+ID}!Actions.\+h@{Actions.\+h}}\index{Actions.\+h@{Actions.\+h}!I\+N\+V\+A\+L\+ID@{I\+N\+V\+A\+L\+ID}}}\mbox{\Hypertarget{_actions_8h_a5827805c542ab9cccf700dc3697cbafcaccc0377a8afbf50e7094f5c23a8af223}\label{_actions_8h_a5827805c542ab9cccf700dc3697cbafcaccc0377a8afbf50e7094f5c23a8af223}} 
+I\+N\+V\+A\+L\+ID&is a non-\/valid game action \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+NE@{N\+O\+NE}!Actions.\+h@{Actions.\+h}}\index{Actions.\+h@{Actions.\+h}!N\+O\+NE@{N\+O\+NE}}}\mbox{\Hypertarget{_actions_8h_a5827805c542ab9cccf700dc3697cbafcab50339a10e1de285ac99d4c3990b8693}\label{_actions_8h_a5827805c542ab9cccf700dc3697cbafcab50339a10e1de285ac99d4c3990b8693}} 
+N\+O\+NE&means no outstanding action to process \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+A\+U\+SE@{P\+A\+U\+SE}!Actions.\+h@{Actions.\+h}}\index{Actions.\+h@{Actions.\+h}!P\+A\+U\+SE@{P\+A\+U\+SE}}}\mbox{\Hypertarget{_actions_8h_a5827805c542ab9cccf700dc3697cbafca291554596c183e837f0a6bec3767c891}\label{_actions_8h_a5827805c542ab9cccf700dc3697cbafca291554596c183e837f0a6bec3767c891}} 
+P\+A\+U\+SE&signals the intention to exit the game \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_actions_8h_a14bdb6dea6cabd733ce612258f33a4b8}\label{_actions_8h_a14bdb6dea6cabd733ce612258f33a4b8}} 
+\index{Actions.\+h@{Actions.\+h}!game\+\_\+action@{game\+\_\+action}}
+\index{game\+\_\+action@{game\+\_\+action}!Actions.\+h@{Actions.\+h}}
+\subsubsection{\texorpdfstring{game\+\_\+action}{game\_action}}
+{\footnotesize\ttfamily std\+::atomic$<$\hyperlink{_actions_8h_a5827805c542ab9cccf700dc3697cbafc}{Game\+Action}$>$ game\+\_\+action}
+
+$<$ Queued Game Action. The next action to be processed as determined by user input. 

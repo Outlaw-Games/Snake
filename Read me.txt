@@ -1,0 +1,13 @@
+Buttons for Game are
+
+Enter - to start game
+W - UP
+S - DOWN
+A - LEFT
+D - RIGHT
+
+Press 1 to End Game.
+
+Black Sprite on map is a hole you can travel to underground, where instead of cherries, worm will spawn.
+
+set tail max size to 10 for purpose of testing.

@@ -1,0 +1,55 @@
+I have created this blog to go alongside Snake and each post is based on a commit.
+
+nake movement 21/10/2017
+	added sprites to my snake and gave snake movmement based on floats and key press. 
+	created my movement with a enum class like game action. also using bools for the movment with key press.
+	 Created a player class and tree class to hold all the information for the two sprites.
+	also added a tree sprite for later use with collisons.
+	used a placemarker for the player and tree sprite, will create/get a sprite for later.
+	
+snake0.2 22/10/2017
+	had an error with the gamefonts so using the orignal template and DD2017 i managed to fix the problem.
+
+sprite rotation push
+	created a sprite for Player (a Snake head) and removed the old sprite, for the tree sprite i used a free source sprite.
+	i tried to create a pause function for my game, but so far it does not seem to work, i tried using the same logic from the 
+	snake template which was using game states, via game actions.
+	I added sprite rotation to my game so the head is always pointing the same direction the player is moving.
+	also created a start screen and main game, with plans for a game over screen as well.
+
+
+gameover push
+	added a gameover screen keyed to "1" at the moment, but will be changed to work with a bool when the player collides with a tree or object
+
+
+snake0.2witherrors
+	Added a cherry sprite and class, had an error with calling the sprite, but fixed it with calling the correct information in the Init and update/renderer files.
+
+Collision added
+	changed the size of the sprites and board to be able to be divided by each other, e.g have created sprites at size 50x50 and board is 1600,1000 this enables the start of sprite collison
+	by being able to have both sprites (player + cherry) to be able to have exact X+Y positions on the board. I have created my collision with the same kind of logic from last years work with Coco's
+	Also so i dont have all sprites appearing in the top left, I have added sprite positons, and random positons with Rand for the Cherries.
+	created a a Gameover bool to load a gameover screen when you collide with something
+
+Second level idea
+	I  had an idea to have something unique to my Snake game, I was thinking of added a "hole" sprite which will allow the player to travel "underground" and instead of collecting Cherry's you can collect Worms instead.
+	I have done this with gamestates, when you collide with the hole it will change color of map and create new sprites to find.
+	while doing this i realsed  i have not done any inheritance for my objects in game (sprites) i will add a hierarchy in my next commit.
+
+Final verison
+	I sadly had some trouble with github so have not done as many commits as  i would like but this commit, splits into 3 different parts. 
+	first is around object hierarchy which i have added so alot of my sprites will inherit information rather than hard coding it too the class.
+	secondly i have added the tail function, I have set the tail function to a max of 10 for testing purposes. made you be able to collide with your own tail, but sadly was having trouble with getting the tail sprites to line up correctly with rotation,
+	so have changed the sprites to be all Redblocks rather than using the orginal snake sprite, with doing this i have commented out the code for the sprites rotation.
+	
+	thirdly I have taken out the tree sprite and my attempt at a random tree generator which placed 10 trees on the map at the start, but sadly this is not working correctly in the update function and renderer, so i have commented out the function for now.
+	full idea was to have them replaced with Rocks undergound and all be collideable etc.
+
+	have addeed a worm sprite which is collidable with the player but will only spawn "undergound"
+
+	Also have added a read me file to github, with controls and extras etc.
+
+Doxygen Docs
+	used Doxygen to create my documentation for Snake, not 100% sure if done correctly, will try and fix it before submittion
+
+	 

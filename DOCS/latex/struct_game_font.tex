@@ -1,0 +1,86 @@
+\hypertarget{struct_game_font}{}\section{Game\+Font Struct Reference}
+\label{struct_game_font}\index{Game\+Font@{Game\+Font}}
+
+
+{\ttfamily \#include $<$Game\+Font.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_game_font_af30cf3bbdec633ab3f31491777ad29b6}{Game\+Font} (int idx, char $\ast$n, int ptm)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct_game_font_ae1e90d4b018bfa8edf42706e245d65f1}{id} = 0
+\item 
+int \hyperlink{struct_game_font_ae81748d3a1c3b0b53650449e0fd4aeb5}{size} = 0
+\item 
+char $\ast$ \hyperlink{struct_game_font_a144b59d96bf37c8876b2cd1f7db64d12}{name} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{struct_game_font}{Game\+Font} $\ast$ \hyperlink{struct_game_font_ac09bfa463d59669ccff031e3e43558ed}{fonts} \mbox{[}5\mbox{]} = \{ nullptr \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A loaded font. A font that\textquotesingle{}s loaded in the game engine. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_game_font_af30cf3bbdec633ab3f31491777ad29b6}\label{struct_game_font_af30cf3bbdec633ab3f31491777ad29b6}} 
+\index{Game\+Font@{Game\+Font}!Game\+Font@{Game\+Font}}
+\index{Game\+Font@{Game\+Font}!Game\+Font@{Game\+Font}}
+\subsubsection{\texorpdfstring{Game\+Font()}{GameFont()}}
+{\footnotesize\ttfamily Game\+Font\+::\+Game\+Font (\begin{DoxyParamCaption}\item[{int}]{idx,  }\item[{char $\ast$}]{n,  }\item[{int}]{ptm }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Sets the font index, it\textquotesingle{}s size and description. Make sure the I\+DX is valid otherwise the font will fail to render. 
+\begin{DoxyParams}{Parameters}
+{\em idx} & is The font index in the Graphics Engine \\
+\hline
+{\em n} & is the name or description of the font \\
+\hline
+{\em ptm} & is the size of the loaded font \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_game_font_ac09bfa463d59669ccff031e3e43558ed}\label{struct_game_font_ac09bfa463d59669ccff031e3e43558ed}} 
+\index{Game\+Font@{Game\+Font}!fonts@{fonts}}
+\index{fonts@{fonts}!Game\+Font@{Game\+Font}}
+\subsubsection{\texorpdfstring{fonts}{fonts}}
+{\footnotesize\ttfamily \hyperlink{struct_game_font}{Game\+Font} $\ast$ Game\+Font\+::fonts = \{ nullptr \}\hspace{0.3cm}{\ttfamily [static]}}
+
+Loaded Fonts. Cheap and nasty way of globalising five loaded fonts. \mbox{\Hypertarget{struct_game_font_ae1e90d4b018bfa8edf42706e245d65f1}\label{struct_game_font_ae1e90d4b018bfa8edf42706e245d65f1}} 
+\index{Game\+Font@{Game\+Font}!id@{id}}
+\index{id@{id}!Game\+Font@{Game\+Font}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Game\+Font\+::id = 0}
+
+Font ID. The ID assigned to the font from the graphics engine. \mbox{\Hypertarget{struct_game_font_a144b59d96bf37c8876b2cd1f7db64d12}\label{struct_game_font_a144b59d96bf37c8876b2cd1f7db64d12}} 
+\index{Game\+Font@{Game\+Font}!name@{name}}
+\index{name@{name}!Game\+Font@{Game\+Font}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char$\ast$ Game\+Font\+::name = \char`\"{}\char`\"{}}
+
+Name. The name of the font. \mbox{\Hypertarget{struct_game_font_ae81748d3a1c3b0b53650449e0fd4aeb5}\label{struct_game_font_ae81748d3a1c3b0b53650449e0fd4aeb5}} 
+\index{Game\+Font@{Game\+Font}!size@{size}}
+\index{size@{size}!Game\+Font@{Game\+Font}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int Game\+Font\+::size = 0}
+
+The font size. The size of the font that was loaded. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/Game\+Font.\+h\item 
+Source/Game\+Font.\+cpp\end{DoxyCompactItemize}
